@@ -69,5 +69,4 @@
 
 		</ul>
 	</section>
-	<!-- /.sidebar -->
 </aside>
