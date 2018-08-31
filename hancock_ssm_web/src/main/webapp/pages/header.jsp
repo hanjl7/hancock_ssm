@@ -24,7 +24,6 @@
 						class="user-image" alt="User Image"> <span class="hidden-xs">
 							xxx
 					</span>
-
 				</a>
 					<ul class="dropdown-menu">
 						<!-- User image -->
