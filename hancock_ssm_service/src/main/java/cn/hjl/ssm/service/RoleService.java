@@ -10,4 +10,6 @@ public interface RoleService {
     void save(Role role);
 
     void deleteRole(String id) throws Exception;
+
+    List<Role> findOtherRoles(String userId);
 }

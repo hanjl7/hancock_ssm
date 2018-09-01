@@ -1,5 +1,6 @@
 package cn.hjl.ssm.service;
 
+import cn.hjl.ssm.domain.Role;
 import cn.hjl.ssm.domain.UserInfo;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -12,4 +13,6 @@ public interface UserService extends UserDetailsService {
     void save(UserInfo userInfo) throws Exception;
 
     UserInfo findById(String id) throws Exception;
+
+
 }

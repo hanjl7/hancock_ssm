@@ -28,4 +28,8 @@ public class RoleServiceImpl implements RoleService {
     public void deleteRole(String id) throws Exception{
         roleDao.deleteRole(id);
     }
+    @Override
+    public List<Role> findOtherRoles(String userId) {
+        return roleDao.findOtherRoles(userId);
+    }
 }

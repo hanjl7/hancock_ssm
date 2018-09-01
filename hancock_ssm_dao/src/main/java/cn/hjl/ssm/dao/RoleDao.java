@@ -24,4 +24,7 @@ public interface RoleDao {
 
     @Delete("delete from role where id = #{id}")
     void deleteRole(String id) throws Exception;
+
+    @Select("select * from role where id not in (select roleId from users_role where userId = #{userId})")
+    List<Role> findOtherRoles(String userId);
 }

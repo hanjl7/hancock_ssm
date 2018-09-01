@@ -12,7 +12,7 @@
     <artifactId>hancock_ssm_web</artifactId>
     <packaging>war</packaging>
 
-    <name>heima_ssm_web Maven Webapp</name>
+    <name>hancock_ssm_web Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
