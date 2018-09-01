@@ -213,7 +213,7 @@
 			<b>Version</b> 1.0.8
 		</div>
 		<strong>Copyright &copy; 2014-2017 <a
-			href="https://github.com/Giraffehjl">hjlHANCOCK  </a>.
+			href="https://github.com/Giraffehjl/hancock_ssm">hjlHANCOCK  </a>.
 		</strong> All rights reserved. </footer>
 		<!-- 底部导航 /-->
 

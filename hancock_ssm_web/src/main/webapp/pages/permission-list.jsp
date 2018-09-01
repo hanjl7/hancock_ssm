@@ -221,7 +221,7 @@
 				<b>Version</b> 1.0.8
 			</div>
 			<strong>Copyright &copy; 2014-2017 <a
-				href="">研究院研发部</a>.
+				href="">HANCOCK-后台管理</a>.
 			</strong> All rights reserved. </footer>
 			<!-- 底部导航 /-->
 
