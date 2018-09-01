@@ -27,4 +27,7 @@ public interface RoleDao {
 
     @Select("select * from role where id not in (select roleId from users_role where userId = #{userId})")
     List<Role> findOtherRoles(String userId);
+
+    @Select("select * from role where id  = #{roleId}")
+    Role findById(String roleId) throws Exception;
 }

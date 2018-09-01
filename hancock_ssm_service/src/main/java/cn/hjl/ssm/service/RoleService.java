@@ -1,5 +1,6 @@
 package cn.hjl.ssm.service;
 
+import cn.hjl.ssm.domain.Permission;
 import cn.hjl.ssm.domain.Role;
 
 import java.util.List;
@@ -12,4 +13,8 @@ public interface RoleService {
     void deleteRole(String id) throws Exception;
 
     List<Role> findOtherRoles(String userId);
+
+    Role findById(String roleId) throws Exception;
+
+
 }

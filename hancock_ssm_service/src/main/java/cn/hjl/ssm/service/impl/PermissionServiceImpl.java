@@ -26,4 +26,8 @@ public class PermissionServiceImpl implements PermissionService {
     public void save(Permission permission) throws Exception {
         permissionDao.save(permission);
     }
+    @Override
+    public List<Permission> findOtherPermission(String roleId) throws Exception {
+        return  permissionDao.findOtherPermission(roleId);
+    }
 }

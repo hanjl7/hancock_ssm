@@ -1,7 +1,10 @@
 package cn.hjl.ssm.service.impl;
 
+import cn.hjl.ssm.dao.PermissionDao;
 import cn.hjl.ssm.dao.RoleDao;
+import cn.hjl.ssm.domain.Permission;
 import cn.hjl.ssm.domain.Role;
+import cn.hjl.ssm.service.PermissionService;
 import cn.hjl.ssm.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +17,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Autowired
     private RoleDao roleDao;
+
     @Override
     public List<Role> findAll() throws Exception {
         return roleDao.findAll() ;
@@ -32,4 +36,11 @@ public class RoleServiceImpl implements RoleService {
     public List<Role> findOtherRoles(String userId) {
         return roleDao.findOtherRoles(userId);
     }
+
+    @Override
+    public Role findById(String roleId) throws Exception {
+        return roleDao.findById(roleId);
+    }
+
+
 }
