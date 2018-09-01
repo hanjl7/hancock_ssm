@@ -60,5 +60,12 @@ public class UserServiceImpl implements UserService {
         return userDao.findById(id);
     }
 
+    @Override
+    public void addRoleToUser(String userId, String[] rolesId) throws Exception {
+        for (String roleId : rolesId) {
+            userDao.addRoleToUser(userId,roleId);
+        }
+    }
+
 
 }

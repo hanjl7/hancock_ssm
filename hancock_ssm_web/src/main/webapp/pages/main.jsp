@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>ITCAST - HANCOCK-后台管理  </title>
+<title>GIRAFFE - HANCOCK-后台管理  </title>
 <meta name="description" content="HANCOCK-后台管理  ">
 <meta name="keywords" content="HANCOCK-后台管理  ">
 

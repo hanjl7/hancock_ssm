@@ -38,4 +38,8 @@ public interface UserDao {
                     many = @Many(select = "cn.hjl.ssm.dao.RoleDao.findRoleByUserId"))
     })
     UserInfo findById(String id) throws Exception;
+
+    @Insert("insert into users_role (userId,roleId) values (#{userId},#{roleId})")
+    void addRoleToUser(@Param("userId") String userId, @Param("roleId") String roleId) throws Exception;
+
 }

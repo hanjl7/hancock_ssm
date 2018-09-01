@@ -58,10 +58,17 @@ public class UserController {
         ModelAndView mv = new ModelAndView();
         UserInfo userInfo = userService.findById(userId);
         List<Role> roleList =roleService.findOtherRoles(userId);
-        mv.addObject("userInfo",userInfo);
+        mv.addObject("user",userInfo);
         mv.addObject("roleList",roleList);
         mv.setViewName("user-role-add");
         return mv;
+    }
+
+    @RequestMapping("/addRoleToUser.do")
+    public String addRoleToUser(@RequestParam(name = "userId",required = true) String userId,
+                                      @RequestParam(name = "ids",required = true) String[] roleIds) throws Exception {
+        userService.addRoleToUser(userId,roleIds);
+        return "redirect:findAll.do";
     }
 
 }
