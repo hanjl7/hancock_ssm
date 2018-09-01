@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/security
     http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <!--开启Spring security提供的注解对方法来进行权限控制-->
+    <!--开启Spring security提供的注解对-=-方法-=-来进行权限控制-->
     <!--//@RolesAllowed("TEST")//jsr250-annotations="enabled"-->
     <!--//@Secured("ROLE_TEST")//secured-annotations="enabled"-->
     <!--//@PreAuthorize("hasRole('ROLE_TEST')")pre-post-annotations="enabled"-->
@@ -25,9 +25,9 @@
     	auto-config="true"	不用自己编写登录的页面，框架提供默认登录页面
     	use-expressions="false"	是否使用SPEL表达式（没学习过）
     -->
-    <security:http auto-config="true" use-expressions="false">
-        <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER的角色" -->
-        <security:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN"/>
+    <security:http auto-config="true" use-expressions="true">
+        <!-- 配置具体的拦截的规则 pattern="请求路径的规则" access="访问系统的人，必须有ROLE_USER ROLE_ADMIN的角色" -->
+        <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
 
         <!-- 定义跳转的具体的页面 -->
         <security:form-login

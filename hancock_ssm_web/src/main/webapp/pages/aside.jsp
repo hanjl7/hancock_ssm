@@ -32,10 +32,15 @@
             </a>
                 <ul class="treeview-menu">
 
-                    <li id="system-setting"><a
-                            href="${pageContext.request.contextPath}/user/findAll.do"> <i
-                            class="fa fa-circle-o"></i> 用户管理
-                    </a></li>
+                    <li id="system-setting">
+                        <%--没有ROLE_TEST 不显示--%>
+                        <security:authorize access="hasRole('TEST')">
+                        <a
+                                href="${pageContext.request.contextPath}/user/findAll.do"> <i
+                                class="fa fa-circle-o"></i> 用户管理
+                        </a>
+                        </security:authorize>
+                    </li>
                     <li id="system-setting"><a
                             href="${pageContext.request.contextPath}/role/findAll.do"> <i
                             class="fa fa-circle-o"></i> 角色管理
