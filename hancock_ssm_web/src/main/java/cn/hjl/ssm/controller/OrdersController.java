@@ -4,11 +4,13 @@ import cn.hjl.ssm.domain.Orders;
 import cn.hjl.ssm.service.OrdersService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.List;
 
 @Controller
@@ -22,6 +24,7 @@ public class OrdersController {
      * 订单信息
      * @return
      */
+    //@PreAuthorize("authentication.principal.username == 'hancock'") //只允许hancock查询
     @RequestMapping("/findById.do")
     public ModelAndView findById(@RequestParam(name = "id",required = true) String id) throws Exception {
         ModelAndView mv = new ModelAndView();
@@ -35,13 +38,17 @@ public class OrdersController {
      * @return
      * @throws Exception
      */
+    //@RolesAllowed("TEST")//jsr250-annotations="enabled"
+    //@Secured("ROLE_TEST")//secured-annotations="enabled"
+    //@PreAuthorize("hasRole('ROLE_TEST')")pre-post-annotations="enabled"
+    //@PreAuthorize("authentication.principal.username == 'hancock'") //只允许hancock查询
     @RequestMapping("/findAll.do")
     public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1") int page,
                               @RequestParam(name = "size",required = true,defaultValue = "3") int size  ) throws Exception {
         ModelAndView mv = new ModelAndView();
         List<Orders> ordersList = ordersService.findAll(page,size);
         //分页的bean
-        PageInfo pageInfo = new PageInfo(ordersList);
+        PageInfo pageInfo = new PageInfo(ordersList,3);
         mv.addObject("pageInfo", pageInfo);
         mv.setViewName("orders-page-list");
         return mv;

@@ -329,7 +329,7 @@
                             <li>
                                 <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageInfo.pageNum-1}&size=${pageInfo.pageSize}">上一页</a>
                             </li>
-                            <c:forEach begin="1" end="${pageInfo.pages}" var="pageNum">
+                            <c:forEach begin="${pageInfo.navigateFirstPage}" end="${pageInfo.navigateLastPage}" var="pageNum">
                                 <li>
                                     <a href="${pageContext.request.contextPath}/orders/findAll.do?page=${pageNum}&size=${pageInfo.pageSize}">${pageNum}</a>
                                 </li>
