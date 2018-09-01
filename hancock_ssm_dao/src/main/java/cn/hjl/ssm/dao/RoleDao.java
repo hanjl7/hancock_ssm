@@ -30,4 +30,7 @@ public interface RoleDao {
 
     @Select("select * from role where id  = #{roleId}")
     Role findById(String roleId) throws Exception;
+
+    @Insert("insert into role_permission(roleId,permissionId) values (#{roleId},#{permissionId})")
+    void addPermissionToRole(@Param("roleId") String roleId,@Param("permissionId") String permissionId);
 }

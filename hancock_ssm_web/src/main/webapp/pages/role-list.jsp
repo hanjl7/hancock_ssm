@@ -152,7 +152,7 @@
 											<td class="text-center">
 												<a href="${pageContext.request.contextPath}/role/findById.do?id=${role.id}" class="btn bg-olive btn-xs">详情</a>
 												<a href="${pageContext.request.contextPath}/role/deleteRole.do?id=${role.id}" class="btn bg-olive btn-xs">删除角色</a>
-												<a href="${pageContext.request.contextPath}/role/findUserByIdAndAllPermission.do?roleId=${role.id}" class="btn bg-olive btn-xs">添加角色</a>
+												<a href="${pageContext.request.contextPath}/role/findUserByIdAndAllPermission.do?roleId=${role.id}" class="btn bg-olive btn-xs">添加角色权限</a>
 											</td>
 										</tr>
 									</c:forEach>

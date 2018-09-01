@@ -20,6 +20,7 @@ public class RoleController {
 
     @Autowired
     private PermissionService permissionService;
+
     @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();
@@ -42,14 +43,21 @@ public class RoleController {
     }
 
     @RequestMapping("/findUserByIdAndAllPermission.do")
-    public ModelAndView findUserByIdAndAllPermission(@RequestParam(name = "roleId",required = true) String roleId) throws Exception {
+    public ModelAndView findUserByIdAndAllPermission(@RequestParam(name = "roleId", required = true) String roleId) throws Exception {
         ModelAndView mv = new ModelAndView();
         Role role = roleService.findById(roleId);
-        List<Permission> permissionList =permissionService.findOtherPermission(roleId);
-        mv.addObject("role",role);
-        mv.addObject("permissionList",permissionList);
+        List<Permission> permissionList = permissionService.findOtherPermission(roleId);
+        mv.addObject("role", role);
+        mv.addObject("permissionList", permissionList);
         mv.setViewName("role-permission-add");
         return mv;
+    }
+
+    @RequestMapping("/addPermissionToRole.do")
+    public String addPermissionToRole(@RequestParam(name = "roleId", required = true) String roleId,
+                                      @RequestParam(name = "ids", required = true) String[] permissionIds) throws Exception {
+        roleService.addPermissionToRole(roleId, permissionIds);
+        return "redirect:findAll.do";
     }
 
 }

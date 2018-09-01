@@ -17,4 +17,5 @@ public interface RoleService {
     Role findById(String roleId) throws Exception;
 
 
+    void addPermissionToRole(String roleId, String[] permissionId) throws Exception;
 }
