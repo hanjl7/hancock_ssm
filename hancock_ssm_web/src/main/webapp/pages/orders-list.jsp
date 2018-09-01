@@ -12,9 +12,9 @@
 
 
 
-<title>数据 - AdminLTE2定制版</title>
-<meta name="description" content="AdminLTE2定制版">
-<meta name="keywords" content="AdminLTE2定制版">
+<title>数据 - HANCOCK-后台管理  </title>
+<meta name="description" content="HANCOCK-后台管理  ">
+<meta name="keywords" content="HANCOCK-后台管理  ">
 
 
 
@@ -364,7 +364,7 @@
 				<b>Version</b> 1.0.8
 			</div>
 			<strong>Copyright &copy; 2014-2017 <a
-				href="https://github.com/Giraffehjl">hjl研究院研发部</a>.
+				href="https://github.com/Giraffehjl">HANCOCK  </a>.
 			</strong> All rights reserved.
 		</footer>
 		<!-- 底部导航 /-->
