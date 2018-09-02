@@ -43,8 +43,8 @@ public class OrdersController {
     //@PreAuthorize("hasRole('ROLE_TEST')")pre-post-annotations="enabled"
     //@PreAuthorize("authentication.principal.username == 'hancock'") //只允许hancock查询
     @RequestMapping("/findAll.do")
-    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1") int page,
-                              @RequestParam(name = "size",required = true,defaultValue = "3") int size  ) throws Exception {
+    public ModelAndView findAll(@RequestParam(name = "page",required = true,defaultValue = "1") Integer page,
+                              @RequestParam(name = "size",required = true,defaultValue = "3") Integer size  ) throws Exception {
         ModelAndView mv = new ModelAndView();
         List<Orders> ordersList = ordersService.findAll(page,size);
         //分页的bean
