@@ -16,6 +16,7 @@ Spring+SpringMVC+Mybatis+AdminLTE实现简单的后台管理系统
     1.5 订单分页查询 
  
      * 订单分页查询，使用的是mybatis分页插件[PageHelper](https://github.com/pagehelper/Mybatis-PageHelper)。
+     [百度](https://www.baidu.com/)
     1.6 订单详情查询 
 
     1.7 Spring Security 概述 
