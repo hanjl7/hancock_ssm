@@ -15,12 +15,14 @@ Spring+SpringMVC+Mybatis+AdminLTE实现简单的后台管理系统
       订单的查询操作，它主要完成简单的多表查询操作，查询订单时，需要查询出与订单关联的其它表中信息。 
     1.5 订单分页查询 
  
-     订单分页查询，使用的是mybatis分页插件PageHelper。
+     *订单分页查询，使用的是mybatis分页插件PageHelper。
+     >https://github.com/pagehelper/Mybatis-PageHelper
     1.6 订单详情查询 
 
     1.7 Spring Security 概述 
  
-      Spring Security是 Spring 项目组中用来提供安全认证服务的框架
+      *Spring Security是 Spring 项目组中用来提供安全认证服务的框架
+      >https://github.com/spring-projects/spring-security
     1.8 用户管理 
  
       用户管理基于spring Security的用户登录、退出操作。
