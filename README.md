@@ -21,6 +21,7 @@ Spring+SpringMVC+Mybatis+AdminLTE实现简单的后台管理系统
   ### Spring Security 概述 
  
       [Spring Security](https://github.com/spring-projects/spring-security)是 Spring 项目组中用来提供安全认证服务的框架
+      ![登陆页面](https://screenshot.net/zh/509dwt7)
   ### 用户管理 
       
       用户管理基于spring Security的用户登录、退出操作。
