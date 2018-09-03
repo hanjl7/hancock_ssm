@@ -1,6 +1,6 @@
 package cn.hjl.ssm.domain;
 
-import cn.hjl.ssm.utils.DateUitls;
+import cn.hjl.ssm.utils.DateUtils;
 
 import java.util.Date;
 import java.util.List;
@@ -66,7 +66,7 @@ public class Orders {
 
     public String getOrderTimeStr() {
         if (orderTime != null) {
-            orderTimeStr = DateUitls.date2String(orderTime, "yyyy-MM-dd HH:mm:ss");
+            orderTimeStr = DateUtils.date2String(orderTime, "yyyy-MM-dd HH:mm:ss");
         }
         return orderTimeStr;
     }

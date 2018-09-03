@@ -1,5 +1,7 @@
 package cn.hjl.ssm.domain;
 
+import cn.hjl.ssm.utils.DateUtils;
+
 import java.util.Date;
 
 public class SysLog {
@@ -12,7 +14,6 @@ public class SysLog {
     private String url;
     private Long executionTime;
     private String method;
-
 
 
     public String getId() {
@@ -28,10 +29,14 @@ public class SysLog {
     }
 
     public void setVisitTime(Date visitTime) {
+
         this.visitTime = visitTime;
     }
 
     public String getVisitTimeStr() {
+        if (visitTime != null) {
+            visitTimeStr = DateUtils.date2String(visitTime, "yyyy-MM-dd HH:mm:ss");
+        }
         return visitTimeStr;
     }
 

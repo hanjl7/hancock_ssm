@@ -1,6 +1,6 @@
 package cn.hjl.ssm.domain;
 
-import cn.hjl.ssm.utils.DateUitls;
+import cn.hjl.ssm.utils.DateUtils;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -63,7 +63,7 @@ public class Product {
 
     public String getDepartureTimeStr() {
         if (departureTime != null) {
-            departureTimeStr = DateUitls.date2String(departureTime, "yyyy-MM-dd HH:mm:ss");
+            departureTimeStr = DateUtils.date2String(departureTime, "yyyy-MM-dd HH:mm:ss");
         }
         return departureTimeStr;
     }

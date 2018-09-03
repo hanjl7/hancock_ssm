@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DateUitls {
+public class DateUtils {
     /**
     *转换日期成字符串
      */

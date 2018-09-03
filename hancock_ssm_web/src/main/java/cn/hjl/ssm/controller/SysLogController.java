@@ -21,7 +21,7 @@ public class SysLogController {
     public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page,
                                 @RequestParam(name = "size", required = true, defaultValue = "5") Integer size) throws Exception {
         ModelAndView mv = new ModelAndView();
-        List<SysLog> sysLogs = sysLogService.findAll(page,size);
+        List<SysLog> sysLogs = sysLogService.findAll(page, size);
         PageInfo pageInfo = new PageInfo(sysLogs, 5);
         mv.addObject("pageInfo", pageInfo);
         mv.setViewName("syslog-list");
