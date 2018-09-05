@@ -19,6 +19,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 查询所有
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/findAll.do")
     public ModelAndView findAll() throws Exception {
         ModelAndView mv = new ModelAndView();

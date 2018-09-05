@@ -2,6 +2,9 @@ package cn.hjl.ssm.domain;
 
 import java.util.List;
 
+/**
+ * 权限
+ */
 public class Permission {
     private String id;
     private String permissionName;
