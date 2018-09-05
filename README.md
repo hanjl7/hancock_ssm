@@ -1,5 +1,7 @@
 # hancock_ssm
 Spring+SpringMVC+Mybatis+AdminLTE实现简单的后台管理系统
+>单独创建了一个Maven工程然后根据通过包的划分来分为 web层,service层,dao层,domain层,utils层,以通过模块来划分这几层，一个层对应一个单独的模块,然后单独去 开发一个模块最后把这几个个模块聚合起来,形成一个整体的项目
+
 
 
 # 功能简介
